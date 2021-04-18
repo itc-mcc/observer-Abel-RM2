@@ -32,7 +32,7 @@ public class Stock implements Subject {
 			for(Trader trader : observers){
 				ret += trader.getNombre()+":The latest trade is Trader:"+operation.getTrader().getNombre()+" "+operation.getTipo_transaccion()+
 						" $"+operation.getPrecio()+" Stock: "+operation.getStock().getTipo()+"\n";
-				trader.update();
+				trader.update(o);
 			}
 			change = false;
 			return ret.substring(0,ret.length()-1);

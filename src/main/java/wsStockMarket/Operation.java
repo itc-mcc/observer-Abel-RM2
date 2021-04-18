@@ -13,6 +13,16 @@ public class Operation {
         this.precio = precio;
     }
 
+    @Override
+    public String toString() {
+        return "Operation{" +
+                "trader=" + trader +
+                ", stock=" + stock +
+                ", tipo_transaccion='" + tipo_transaccion + '\'' +
+                ", precio=" + precio +
+                '}';
+    }
+
     public Trader getTrader() {
         return trader;
     }
